@@ -7,7 +7,9 @@ public class PlayerMovement : MonoBehaviour {
     public float movementSpeed = 10f;
     public static PlayerMovement instance;
 
-    private float cameraOffset = 10;
+
+    private Animator animController;
+    private float cameraOffset = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -15,6 +17,8 @@ public class PlayerMovement : MonoBehaviour {
             Destroy(this); // We can only have one player in our scene. And to make it easier to access for other classes we made it a singleton.
         } else {
             instance = this;
+
+            animController = GetComponent<Animator>();
         }
 	}
 	
@@ -23,22 +27,36 @@ public class PlayerMovement : MonoBehaviour {
         // Set new position
         float newX = transform.position.x + movementSpeed * Time.deltaTime;
         transform.position = new Vector3(newX, transform.position.y, transform.position.z);
+    }
 
-
-        //TODO: Refactor this code to make it SR (eg. Event Based)
-        if(Input.GetKey(KeyCode.RightArrow)) {
-            cameraOffset -= .1f;
-            if(cameraOffset < 0) {
-                cameraOffset = 0;
-            }
+    public void moveLeft() {
+        cameraOffset += .1f;
+        if (cameraOffset > 10) {
+            cameraOffset = 10;
         }
+    }
 
-        if (Input.GetKey(KeyCode.LeftArrow)) {
-            cameraOffset += .1f;
-            if (cameraOffset > 10) {
-                cameraOffset = 10;
-            }
+    public void moveRight() {
+        cameraOffset -= .1f;
+        if (cameraOffset < 0) {
+            cameraOffset = 0;
         }
+    }
+
+    public void jump() {
+        if (animController.GetCurrentAnimatorStateInfo(0).IsName("Start Jump") || animController.GetBool("Start Jump") || animController.IsInTransition(0))
+            return;
+
+        animController.ResetTrigger("Slide");
+        animController.SetTrigger("Start Jump");
+    }
+
+    public void slide() {
+        if (animController.GetCurrentAnimatorStateInfo(0).IsName("Sliding") || animController.GetBool("Slide") || animController.IsInTransition(0))
+            return;
+
+        animController.ResetTrigger("Start Jump");
+        animController.SetTrigger("Slide");
     }
 
     public Vector3 getCameraFixedPos() {
