@@ -5,22 +5,14 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
     public float movementSpeed = 10f;
-    public static PlayerMovement instance;
-
 
     private Animator animController;
     private float cameraOffset = 0;
 
 	// Use this for initialization
 	void Start () {
-		if(PlayerMovement.instance != null) {
-            Destroy(this); // We can only have one player in our scene. And to make it easier to access for other classes we made it a singleton.
-        } else {
-            instance = this;
-
-            animController = GetComponent<Animator>();
-        }
-	}
+        animController = GetComponent<Animator>();
+    }
 	
 	// Update is called once per frame
 	void Update () {

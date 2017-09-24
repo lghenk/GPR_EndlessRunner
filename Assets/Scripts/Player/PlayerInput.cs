@@ -9,11 +9,6 @@ public class PlayerInput : MonoBehaviour {
     public UnityEvent left = new UnityEvent();
     public UnityEvent right = new UnityEvent();
     public UnityEvent shift = new UnityEvent();
-
-    // Use this for initialization
-    void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update () {
