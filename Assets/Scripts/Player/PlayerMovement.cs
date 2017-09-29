@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     public void jump() {
-        if (animController.GetCurrentAnimatorStateInfo(0).IsName("Start Jump") || animController.GetBool("Start Jump") || animController.IsInTransition(0))
+        if (animController.GetCurrentAnimatorStateInfo(0).IsName("Start Jump") || animController.GetBool("Start Jump"))
             return;
 
         animController.ResetTrigger("Slide");
@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     public void slide() {
-        if (animController.GetCurrentAnimatorStateInfo(0).IsName("Sliding") || animController.GetBool("Slide") || animController.IsInTransition(0))
+        if (animController.GetCurrentAnimatorStateInfo(0).IsName("Sliding") || animController.GetBool("Slide"))
             return;
 
         animController.ResetTrigger("Start Jump");

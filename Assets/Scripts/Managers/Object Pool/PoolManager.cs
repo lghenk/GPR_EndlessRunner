@@ -19,6 +19,14 @@ public class PoolManager : MonoBehaviour {
             instance = this;
 
             for (var i = 0; i < DefaultObjects.Length; i++) {
+                if(!defaults.ContainsKey(DefaultObjects[i].objectType)) {
+                    defaults.Add(DefaultObjects[i].objectType, new List<GameObject>());
+                }
+
+                if (!pool.ContainsKey(DefaultObjects[i].objectType)) {
+                    pool.Add(DefaultObjects[i].objectType, new List<GameObject>());
+                }
+
                 defaults[DefaultObjects[i].objectType].Add(DefaultObjects[i].prefab);
 
                 for(var j = 0; j < DefaultObjects[i].defaultInPool; j++) {
@@ -38,6 +46,7 @@ public class PoolManager : MonoBehaviour {
 
         int randomItem = Random.Range(0, pool[type].Count - 1);
         GameObject go = pool[type][randomItem];
+        pool[type].Remove(go);
         go.SetActive(true);
         return go;
     }
