@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour {
 
     private Animator animController;
     private float cameraOffset = 0;
+    public Rigidbody _rb;
+    private bool isJumping = false;
 
 	// Use this for initialization
 	void Start () {
@@ -36,11 +38,14 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     public void jump() {
-        if (animController.GetCurrentAnimatorStateInfo(0).IsName("Start Jump") || animController.GetBool("Start Jump"))
+        if (animController.GetCurrentAnimatorStateInfo(0).IsName("Start Jump") || animController.GetBool("Start Jump") || isJumping)
             return;
 
+        isJumping = true;
         animController.ResetTrigger("Slide");
         animController.SetTrigger("Start Jump");
+        _rb.AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
+
     }
 
     public void slide() {
@@ -55,5 +60,12 @@ public class PlayerMovement : MonoBehaviour {
         Vector3 pos = transform.position;
         pos.x += cameraOffset;
         return pos;
+    }
+
+    private void OnCollisionEnter(Collision collision) {
+        if(isJumping) {
+            animController.SetTrigger("End Jump");
+            isJumping = false;
+        }           
     }
 }
