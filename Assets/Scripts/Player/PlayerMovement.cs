@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour {
 	void Update () {
         // Set new position
         float newX = transform.position.x + movementSpeed * Time.deltaTime;
-        transform.position = new Vector3(newX, transform.position.y, transform.position.z);
+        _rb.MovePosition(new Vector3(newX, transform.position.y, transform.position.z));
     }
 
     public void moveLeft() {

@@ -152,7 +152,18 @@ Prefab:
       propertyPath: startChunk
       value: 
       objectReference: {fileID: 1729425540}
-    m_RemovedComponents: []
+    - target: {fileID: 114934556656553704, guid: d694fa36cf87d22419f8953d2a252d57,
+        type: 2}
+      propertyPath: min
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 114934556656553704, guid: d694fa36cf87d22419f8953d2a252d57,
+        type: 2}
+      propertyPath: max
+      value: 50
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114189519028235610, guid: d694fa36cf87d22419f8953d2a252d57, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d694fa36cf87d22419f8953d2a252d57, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &773580990
@@ -193,6 +204,11 @@ Prefab:
     - target: {fileID: 4343943597878918, guid: 7be461c79217163449086255fd1007a7, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 54092518169559610, guid: 7be461c79217163449086255fd1007a7,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 120
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7be461c79217163449086255fd1007a7, type: 2}
