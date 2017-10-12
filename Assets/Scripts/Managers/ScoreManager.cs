@@ -21,7 +21,7 @@ public class ScoreManager : MonoBehaviour {
 	}
 
 	void Start () {
-		InvokeRepeating("updateScore", seconds / 100, 1f);
+		InvokeRepeating("updateScore", 0f , seconds / 100);
 	}
 
 	void Update(){

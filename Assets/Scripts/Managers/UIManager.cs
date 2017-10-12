@@ -27,6 +27,7 @@ public class UIManager : MonoBehaviour {
             // Since we start the game for the first time (or reload the scene we would like to open the "press any key to start" screen aka the main menu)
 
             activateUI("mainMenu");
+            Time.timeScale = 0;
         } else {
             Debug.Log("Additional UI Manager detected... Destroying");
             Destroy(this);

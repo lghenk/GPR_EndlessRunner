@@ -15,12 +15,10 @@ public class MainMenu : MonoBehaviour {
 		_mbk = GetComponent<MenuBlink>(); 
 		menuBG = GameObject.Find ("MenuBG");
 		_mbg = menuBG.GetComponent<RawImage>();
-		Time.timeScale = 0;
 	}
 
 	void Update (){
 		if (Input.anyKeyDown && !Input.GetKeyDown(KeyCode.Escape)) {
-			Debug.Log ("werkt!!!!");
 			startGame ();
 		}
 		if (Input.GetKeyDown(KeyCode.Escape)){
@@ -28,8 +26,7 @@ public class MainMenu : MonoBehaviour {
 		}
 	}
     public void startGame() {
-		_mbg.enabled = false;
-		this.enabled = false;
+        UIManager.instance.deactivateUI("mainMenu");
 		Time.timeScale = 1;
     }
 }
