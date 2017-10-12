@@ -17,7 +17,7 @@ public class AvoidableManager : MonoBehaviour {
 	}
 
     IEnumerator spawnFirstAvoidable() {
-        if (PoolManager.instance == null)
+        if (PoolManager.instance == null || PlayerManager.instance == null)
             yield return new WaitForEndOfFrame();
 
         // Spawn first avoidable X units away from player

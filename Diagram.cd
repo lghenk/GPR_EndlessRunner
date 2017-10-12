@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AvoidableManager">
+    <Position X="4.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEAAIACAQAAAAEAAABAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Managers\AvoidableManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraStalk">
+    <Position X="6" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\CameraStalk.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChunkManager">
+    <Position X="7.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAACAABAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Managers\Chunk\ChunkManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChunkThreshold">
+    <Position X="9.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAAAAACIAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Managers\Chunk\ChunkThreshold.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeathHandler">
+    <Position X="11.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIQAAACAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\DeathHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeathManager">
+    <Position X="4.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAABAABAEAAggAAAAgAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Managers\DeathManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeathScreen">
+    <Position X="6" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAgCAAQAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\DeathScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DefaultObjects">
+    <Position X="11.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAACAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Managers\Object Pool\DefaultObjects.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainMenu">
+    <Position X="7.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgCAAAAAAAAEAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\UI\MainMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Objects">
+    <Position X="9.5" Y="3.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Objects.type">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Managers\Object Pool\Objects.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Managers\Object Pool\Objects.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PauseManager">
+    <Position X="4.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Assets\Scripts\Managers\PauseManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerInput">
+    <Position X="6" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAACAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerInput.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerManager">
+    <Position X="7.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAAAAAAAAAAAABAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Managers\PlayerManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerMovement">
+    <Position X="9.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAgAAACAAAIABAAAAAAAAAAAAAgAIACAECEAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerMovement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PoolManager">
+    <Position X="11.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAgACAAAAAAQAAAAAAACABAAAAAAAgAAAAABAA=</HashCode>
+      <FileName>Assets\Scripts\Managers\Object Pool\PoolManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="DefaultObjects" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ScoreManager">
+    <Position X="4.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAgACAAAAAAAAAIAAAAAAAAAAAIAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Managers\ScoreManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UIManager">
+    <Position X="6" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAADAEAAAQAKAAAAAEAA=</HashCode>
+      <FileName>Assets\Scripts\Managers\UIManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
