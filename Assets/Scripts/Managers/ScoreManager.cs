@@ -7,6 +7,12 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour {
 
 	public static float score;
+	public float points;
+
+
+	[Header("100 equals 1 second")]
+	public float seconds;
+
 	Text text;
 
 	void Awake(){
@@ -15,7 +21,7 @@ public class ScoreManager : MonoBehaviour {
 	}
 
 	void Start () {
-		InvokeRepeating("updateScore",0.000015f, 0.000015f);
+		InvokeRepeating("updateScore", seconds / 100, 1f);
 	}
 
 	void Update(){
@@ -23,7 +29,7 @@ public class ScoreManager : MonoBehaviour {
 	}
 
 	void updateScore(){
-		score++;
+		score = score + points;
 		Debug.Log(score);
 	}
 
