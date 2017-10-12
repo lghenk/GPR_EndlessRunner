@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 9dae5adbed2533b41a57a1b17a54b47e, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -767,6 +767,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114787408573141532, guid: d694fa36cf87d22419f8953d2a252d57,
+        type: 2}
+      propertyPath: DefaultObjects.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4267125783775872, guid: d694fa36cf87d22419f8953d2a252d57, type: 2}
       propertyPath: m_LocalPosition.x
       value: 16.777828
@@ -812,6 +817,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114787408573141532, guid: d694fa36cf87d22419f8953d2a252d57,
+        type: 2}
+      propertyPath: DefaultObjects.Array.data[4].defaultInPool
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787408573141532, guid: d694fa36cf87d22419f8953d2a252d57,
+        type: 2}
+      propertyPath: DefaultObjects.Array.data[4].objectType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114787408573141532, guid: d694fa36cf87d22419f8953d2a252d57,
+        type: 2}
+      propertyPath: DefaultObjects.Array.data[4].prefab
+      value: 
+      objectReference: {fileID: 1498596272616556, guid: 4b59ec87b974a784493dbbb52e871736,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d694fa36cf87d22419f8953d2a252d57, type: 2}
   m_IsPrefabParent: 0
@@ -1056,7 +1077,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.64
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -1278,21 +1299,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 23119125906999236, guid: a22fd44a11736be4cbde2752e664bf1b,
-        type: 2}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: 40cb174dff5db6b4b8255539fe52bfd3, type: 2}
-    - target: {fileID: 23119125906999236, guid: a22fd44a11736be4cbde2752e664bf1b,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 5a70201495779f347b341011cb634b11, type: 2}
-    - target: {fileID: 23119125906999236, guid: a22fd44a11736be4cbde2752e664bf1b,
-        type: 2}
-      propertyPath: m_Materials.Array.data[2]
-      value: 
-      objectReference: {fileID: 2100000, guid: 46dcf38a90392094bbfc54a88bb3d94b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a22fd44a11736be4cbde2752e664bf1b, type: 2}
   m_IsPrefabParent: 0
