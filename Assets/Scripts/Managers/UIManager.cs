@@ -13,6 +13,8 @@ public class UIManager : MonoBehaviour {
 
     private Dictionary<string, GameObject> UIS = new Dictionary<string, GameObject>();
 
+    public bool hasGameStarted = false;
+
 	// Use this for initialization
 	void Start () {
 		if(instance == null) {

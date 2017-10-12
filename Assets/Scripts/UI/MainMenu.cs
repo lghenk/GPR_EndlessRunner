@@ -19,6 +19,7 @@ public class MainMenu : MonoBehaviour {
 
 	void Update (){
 		if (Input.anyKeyDown && !Input.GetKeyDown(KeyCode.Escape)) {
+            UIManager.instance.hasGameStarted = true;
 			startGame ();
 		}
 		if (Input.GetKeyDown(KeyCode.Escape)){

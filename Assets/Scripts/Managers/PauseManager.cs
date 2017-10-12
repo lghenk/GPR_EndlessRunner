@@ -7,15 +7,15 @@ public class PauseManager : MonoBehaviour {
 	public bool isPaused = false;
 
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.Escape)) {
+		if (Input.GetKeyDown(KeyCode.Escape) && UIManager.instance.hasGameStarted) {
 			if (!isPaused) {
+                UIManager.instance.activateUI("pauzeScreen");
 				isPaused = true;
-				Time.timeScale = 1;
-				Debug.Log ("Game resumed");
-			} else {
-				isPaused = false;
 				Time.timeScale = 0;
-				Debug.Log ("Game paused");
+			} else {
+                UIManager.instance.deactivateUI("pauzeScreen");
+                isPaused = false;
+				Time.timeScale = 1;
 			}
 		}
 	}

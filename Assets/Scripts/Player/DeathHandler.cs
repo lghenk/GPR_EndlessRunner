@@ -20,11 +20,8 @@ public class DeathHandler : MonoBehaviour {
 
     void Dead() {
         Time.timeScale = 0;
-        // TODO: Open UI 
-        // - At this moment nathan knew he fuckeduo
-        // - GTA Death screen
-        // - To be continued
-
+        UIManager.instance.hasGameStarted = false;
+        UIManager.instance.deactivateUI("pauzeScreen"); // Just to be sure
         UIManager.instance.activateUI("death");
 
     }
