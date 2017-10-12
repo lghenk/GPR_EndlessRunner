@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class PauseManager : MonoBehaviour {
 
-	private bool isPaused = false;
+	public bool isPaused = false;
 
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.Escape)) {
-			if (isPaused) {
-				isPaused = false;
+			if (!isPaused) {
+				isPaused = true;
 				Time.timeScale = 1;
 				Debug.Log ("Game resumed");
 			} else {
-				isPaused = true;
+				isPaused = false;
 				Time.timeScale = 0;
-				Debug.Log ("Game p");
+				Debug.Log ("Game paused");
 			}
 		}
 	}
