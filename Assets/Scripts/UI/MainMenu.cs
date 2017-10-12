@@ -5,16 +5,12 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour {
 
-	private GameObject menuBG;
 	private GameObject menu;
-	private	RawImage _mbg;
 	private MenuBlink _mbk;
 
 	void Start(){
 		menu = GameObject.Find ("Menu");
 		_mbk = GetComponent<MenuBlink>(); 
-		menuBG = GameObject.Find ("MenuBG");
-		_mbg = menuBG.GetComponent<RawImage>();
 	}
 
 	void Update (){

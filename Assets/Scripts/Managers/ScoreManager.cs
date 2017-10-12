@@ -30,7 +30,6 @@ public class ScoreManager : MonoBehaviour {
 
 	void updateScore(){
 		score = score + points;
-		Debug.Log(score);
 	}
 
 }
