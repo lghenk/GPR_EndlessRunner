@@ -6,11 +6,6 @@ public class ChunkThreshold : MonoBehaviour {
 
     [SerializeField] [Range(-30, 30)] private int treshold = 0;
     private bool isActive = false;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update () {
