@@ -11,13 +11,13 @@ public class PlayerMovement : MonoBehaviour {
     public Rigidbody _rb;
     private bool isJumping = false;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start() {
         animController = GetComponent<Animator>();
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update() {
         // Set new position
         float newX = transform.position.x + movementSpeed * Time.deltaTime;
         _rb.MovePosition(new Vector3(newX, transform.position.y, transform.position.z));
@@ -63,9 +63,9 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     private void OnCollisionEnter(Collision collision) {
-        if(isJumping) {
+        if (isJumping) {
             animController.SetTrigger("End Jump");
             isJumping = false;
-        }           
+        }
     }
 }

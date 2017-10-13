@@ -4,13 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class DeathScreen : MonoBehaviour {
-	// Update is called once per frame
-	void Update () {
-		if(Input.GetKeyDown(KeyCode.Return)) {
+    // Update is called once per frame
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.Return)) {
             SceneManager.LoadScene("Main Game"); // Simply reload the scene. Easiest way to restart the game innit?
-        } else if(Input.GetKeyDown(KeyCode.Escape)) {
+        } else if (Input.GetKeyDown(KeyCode.Escape)) {
             UIManager.instance.activateUI("deathQuit");
             UIManager.instance.deactivateUI("death");
         }
-	}
+    }
 }

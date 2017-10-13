@@ -4,41 +4,37 @@ using UnityEngine;
 
 public class DeathManager : MonoBehaviour {
 
-	public int startingHealth = 3;
-	public int currentHealth;
+    public int startingHealth = 3;
+    public int currentHealth;
 
-	bool isDead;
-	bool damaged;
-
-
-	void Awake (){
-		currentHealth = startingHealth;
-	}
-		
-	void Update ()
-	{
-		if (damaged) {
-			
-		}
-		damaged = false;
-	}
-
-	public void TakeDamage (int amount)
-		{
-			damaged = true;
-
-			currentHealth -= 1;
-
-			if(currentHealth <= 0 && !isDead)
-			{
-				Death ();
-			}
-		}
+    bool isDead;
+    bool damaged;
 
 
-		void Death ()
-		{
-			isDead = true;
-			Time.timeScale = 0;
-		}
-	}
+    void Awake() {
+        currentHealth = startingHealth;
+    }
+
+    void Update() {
+        if (damaged) {
+
+        }
+        damaged = false;
+    }
+
+    public void TakeDamage(int amount) {
+        damaged = true;
+
+        currentHealth -= 1;
+
+        if (currentHealth <= 0 && !isDead) {
+            Death();
+        }
+    }
+
+
+    void Death() {
+        isDead = true;
+        Time.timeScale = 0;
+    }
+}

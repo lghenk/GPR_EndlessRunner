@@ -9,10 +9,10 @@ public class PlayerInput : MonoBehaviour {
     public UnityEvent left = new UnityEvent();
     public UnityEvent right = new UnityEvent();
     public UnityEvent shift = new UnityEvent();
-	
-	// Update is called once per frame
-	void Update () {
-		if(Input.GetKeyDown(KeyCode.Space)) {
+
+    // Update is called once per frame
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.Space)) {
             jump.Invoke();
         }
 

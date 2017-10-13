@@ -4,41 +4,37 @@ using UnityEngine.UI;
 
 public class MenuBlink : MonoBehaviour {
 
-	public RawImage quit;
-	private RawImage image;
-	private bool isActive = true;
+    public RawImage quit;
+    private RawImage image;
+    private bool isActive = true;
 
-	void Start ()
-	{
-		image = GetComponent<RawImage>();
-		StartBlinking();
-	}
+    void Start() {
+        image = GetComponent<RawImage>();
+        StartBlinking();
+    }
 
-	IEnumerator Blink()
-	{
-		while (true) {
-			if (!isActive) {
-				image.enabled = false;
-				quit.enabled = true;
-				yield return new WaitForSecondsRealtime(.5f);
-			} else {
-				image.enabled = true;
-				quit.enabled = false;
-				yield return new WaitForSecondsRealtime(.80f);
-			}
+    IEnumerator Blink() {
+        while (true) {
+            if (!isActive) {
+                image.enabled = false;
+                quit.enabled = true;
+                yield return new WaitForSecondsRealtime(.5f);
+            } else {
+                image.enabled = true;
+                quit.enabled = false;
+                yield return new WaitForSecondsRealtime(.80f);
+            }
 
-			isActive = !isActive;
-		}
-	}
+            isActive = !isActive;
+        }
+    }
 
-	void StartBlinking()
-	{
-		StopAllCoroutines();
-		StartCoroutine("Blink");
-	}
+    void StartBlinking() {
+        StopAllCoroutines();
+        StartCoroutine("Blink");
+    }
 
-	 public void StopBlinking()
-	{
-		StopCoroutine(Blink());
-	}
+    public void StopBlinking() {
+        StopCoroutine(Blink());
+    }
 }

@@ -13,15 +13,15 @@ public class DeathQuit : MonoBehaviour {
     public GameObject babyScreen;
 
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start() {
         babyScreen.SetActive(false);
         _as = GetComponent<AudioSource>();
         _as.clip = staticNoice;
         _as.Play();
         StartCoroutine("EndItAll");
-	}
-	
+    }
+
     IEnumerator EndItAll() {
         yield return new WaitForSecondsRealtime(2f);
         staticScreen.SetActive(false);

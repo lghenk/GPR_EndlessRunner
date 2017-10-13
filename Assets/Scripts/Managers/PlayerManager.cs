@@ -9,7 +9,7 @@ public class PlayerManager : MonoBehaviour {
     public PlayerMovement playerMovement;
 
     // Use this for initialization
-    void Start () {
+    void Start() {
         if (PlayerManager.instance != null) { // I know i know.
             Destroy(this);
         } else {

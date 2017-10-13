@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class PauseManager : MonoBehaviour {
 
-	public bool isPaused = false;
+    public bool isPaused = false;
 
-	void Update () {
-		if (Input.GetKeyDown(KeyCode.Escape) && UIManager.instance.hasGameStarted) {
-			if (!isPaused) {
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.Escape) && UIManager.instance.hasGameStarted) {
+            if (!isPaused) {
                 UIManager.instance.activateUI("pauzeScreen");
-				isPaused = true;
-				Time.timeScale = 0;
-			} else {
+                isPaused = true;
+                Time.timeScale = 0;
+            } else {
                 UIManager.instance.deactivateUI("pauzeScreen");
                 isPaused = false;
-				Time.timeScale = 1;
-			}
-		}
-	}
+                Time.timeScale = 1;
+            }
+        }
+    }
 }
